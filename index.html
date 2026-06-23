@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D.I.A. // INTAKE TERMINAL</title>
     <style>
-        :root { --bg: #000000; --text: #ffffff; --border: #333333; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Courier New', Courier, monospace; padding: 2rem; line-height: 1.5; }
-        .container { max-width: 800px; margin: 0 auto; }
-        header { border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 2rem; }
+        :root { --bg: #000000; --text: #ffffff; --border: #333333; --signal: #ffffff; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Courier New', Courier, monospace; margin: 0; padding: 2rem; line-height: 1.6; }
+        .container { max-width: 600px; margin: 0 auto; }
         
-        /* Form Styling */
-        form { border: 1px solid var(--border); padding: 2rem; }
-        label { display: block; margin-top: 1.5rem; text-transform: uppercase; font-size: 0.8rem; }
-        input[type="text"], select, textarea { width: 100%; background: #111; border: 1px solid var(--border); color: #fff; padding: 0.5rem; margin-top: 0.5rem; box-sizing: border-box; }
-        .checkbox-group { margin-top: 1rem; }
-        .checkbox-group label { display: inline-block; margin-right: 1rem; font-size: 0.9rem; }
+        header { border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 2rem; display: flex; justify-content: space-between; font-size: 0.8rem; }
+        h1 { text-transform: uppercase; letter-spacing: 2px; font-size: 1.5rem; }
         
-        .btn { display: block; width: 100%; background: var(--text); color: var(--bg); padding: 1rem; text-align: center; font-weight: bold; cursor: pointer; border: none; margin-top: 2rem; }
+        form { margin-top: 2rem; }
+        label { display: block; margin-top: 1.5rem; text-transform: uppercase; font-size: 0.75rem; color: #aaa; }
+        input, select, textarea { width: 100%; background: #0a0a0a; border: 1px solid var(--border); color: #fff; padding: 0.8rem; margin-top: 0.5rem; box-sizing: border-box; font-family: inherit; }
+        
+        .btn { display: block; width: 100%; background: var(--text); color: var(--bg); padding: 1rem; text-align: center; font-weight: bold; cursor: pointer; border: none; margin-top: 2rem; text-transform: uppercase; letter-spacing: 1px; }
         .btn:hover { background: #cccccc; }
     </style>
 </head>
@@ -29,37 +28,29 @@
         <div>STATUS: INTAKE ACTIVE</div>
     </header>
 
-    <section class="manifesto">
-        <h1>Intake Terminal // 1:1 Custom Synthesis</h1>
-        <p>Define your intent. Submit your signal. Our synthesis engine will process your requirement.</p>
+    <section>
+        <h1>Baseline 0 // The Genesis Collection</h1>
+        <p>Baseline 0 is the structural foundation of the D.I.A. ecosystem. It is the uniform for those who prioritize output over noise.</p>
+        <p><em>Methodology: Action Behind Intention.</em></p>
     </section>
 
     <!-- The Intake Form -->
-    <form name="custom-intake" method="POST" data-netlify="true">
-        
-        <label>1. Select Asset Base</label>
+    <form name="custom-intake" method="POST" data-netlify="true" action="/success.html">
+        <label>1. Asset Base</label>
         <select name="base-garment" required>
             <option value="hoodie">Genesis Hoodie (400GSM)</option>
             <option value="tee">Genesis Tee (250GSM)</option>
         </select>
 
-        <label>2. Define Your Intent (Description)</label>
-        <textarea name="intent-description" rows="4" placeholder="Describe the concept, message, or signal you wish to manifest..." required></textarea>
+        <label>2. Define Intent (Manifesto)</label>
+        <textarea name="intent" rows="5" placeholder="Articulate the signal or concept you wish to synthesize..." required></textarea>
 
-        <label>3. Placement Preferences (Tick all that apply)</label>
-        <div class="checkbox-group">
-            <label><input type="checkbox" name="placement" value="front-center"> Front Center</label>
-            <label><input type="checkbox" name="placement" value="back-center"> Back Center</label>
-            <label><input type="checkbox" name="placement" value="hem-tag"> Hem Tag / Branding</label>
-        </div>
-
-        <label>4. Contact Information</label>
-        <input type="text" name="customer-name" placeholder="Name" required>
-        <input type="text" name="customer-email" placeholder="Email" required>
+        <label>3. Contact (Registry Info)</label>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
 
         <button type="submit" class="btn">INITIATE CUSTOM SYNTHESIS</button>
     </form>
-
 </div>
 
 </body>
