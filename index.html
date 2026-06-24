@@ -5,53 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D.I.A. // INTAKE TERMINAL</title>
     <style>
-        :root { --bg: #000000; --text: #ffffff; --border: #333333; --signal: #ffffff; }
+        :root { --bg: #000000; --text: #ffffff; --border: #333333; }
         body { background-color: var(--bg); color: var(--text); font-family: 'Courier New', Courier, monospace; margin: 0; padding: 2rem; line-height: 1.6; }
         .container { max-width: 600px; margin: 0 auto; }
-        
         header { border-bottom: 1px solid var(--border); padding-bottom: 1rem; margin-bottom: 2rem; display: flex; justify-content: space-between; font-size: 0.8rem; }
         h1 { text-transform: uppercase; letter-spacing: 2px; font-size: 1.5rem; }
-        
         form { margin-top: 2rem; }
         label { display: block; margin-top: 1.5rem; text-transform: uppercase; font-size: 0.75rem; color: #aaa; }
         input, select, textarea { width: 100%; background: #0a0a0a; border: 1px solid var(--border); color: #fff; padding: 0.8rem; margin-top: 0.5rem; box-sizing: border-box; font-family: inherit; }
-        
         .btn { display: block; width: 100%; background: var(--text); color: var(--bg); padding: 1rem; text-align: center; font-weight: bold; cursor: pointer; border: none; margin-top: 2rem; text-transform: uppercase; letter-spacing: 1px; }
         .btn:hover { background: #cccccc; }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <header>
-        <div>D.I.A. // SYSTEM</div>
-        <div>STATUS: INTAKE ACTIVE</div>
-    </header>
-
-    <section>
-        <h1>Baseline 0 // The Genesis Collection</h1>
-        <p>Baseline 0 is the structural foundation of the D.I.A. ecosystem. It is the uniform for those who prioritize output over noise.</p>
-        <p><em>Methodology: Action Behind Intention.</em></p>
-    </section>
-
-    <!-- The Intake Form -->
-    <form name="custom-intake" method="POST" data-netlify="true" action="/success.html">
-        <label>1. Asset Base</label>
-        <select name="base-garment" required>
-            <option value="hoodie">Genesis Hoodie (400GSM)</option>
-            <option value="tee">Genesis Tee (250GSM)</option>
-        </select>
-
-        <label>2. Define Intent (Manifesto)</label>
-        <textarea name="intent" rows="5" placeholder="Articulate the signal or concept you wish to synthesize..." required></textarea>
-
-        <label>3. Contact (Registry Info)</label>
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-
-        <button type="submit" class="btn">INITIATE CUSTOM SYNTHESIS</button>
-    </form>
-</div>
-
+    <div class="container">
+        <header>
+            <div>D.I.A. // SYSTEM</div>
+            <div>STATUS: INTAKE ACTIVE</div>
+        </header>
+        <section>
+            <h1>Baseline 0 // The Genesis Collection</h1>
+            <p>Baseline 0 is the structural foundation of the D.I.A. ecosystem.</p>
+        </section>
+        <!-- Relative path used for action -->
+        <form name="custom-intake" method="POST" data-netlify="true" action="success.html">
+            <label>1. Asset Base</label>
+            <select name="base-garment" required>
+                <option value="hoodie">Genesis Hoodie (400GSM)</option>
+                <option value="tee">Genesis Tee (250GSM)</option>
+            </select>
+            <label>2. Define Intent</label>
+            <textarea name="intent" rows="5" placeholder="Articulate the signal..." required></textarea>
+            <label>3. Contact Info</label>
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit" class="btn">INITIATE CUSTOM SYNTHESIS</button>
+        </form>
+    </div>
 </body>
 </html>
